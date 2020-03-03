@@ -1,0 +1,260 @@
+netstat value for current host:
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+0.0.0.0         10.0.1.1        0.0.0.0         UG        0 0          0 h1-eth0
+10.0.1.0        0.0.0.0         255.255.255.0   U         0 0          0 h1-eth0
+
+
+
+gateway address for current host:
+10.0.1.1
+
+
+snmpnetstat Ipv4 value host gateway:
+IPv4 Routing tables (inetCidrRouteTable)
+Destination                Gateway                    Flags   Interface
+10.0.1.0/24                0.0.0.0                    <U>     r0-eth1
+172.0.10.0/24              0.0.0.0                    <U>     r0-eth0
+198.0.5.0/24               0.0.0.0                    <U>     r0-eth2
+
+
+
+ Subnet details value:
+
+
+
+hostslist ['10.0.1.1', '10.0.1.12']
+in add newvar convetintojson
+10.0.1.1 : up : dict_keys([]) : dict_values([])
+10.0.1.12 : up : dict_keys([]) : dict_values([])
+{"nmap": {"command_line": "nmap -oX - -n -sP -PE -PA21,23,80,3389 10.0.1.0/24", "scaninfo": {}, "scanstats": {"totalhosts": "256", "elapsed": "3.73", "uphosts": "2", "downhosts": "254", "timestr": "Tue Feb 18 12:37:04 2020"}}, "scan": {"10.0.1.12": {"L2 Details": {}, "vendor": {}, "Routing": {}, "status": {"state": "up", "reason": "localhost-response"}, "L3 Details": {}, "hostnames": [{"type": "", "name": ""}], "addresses": {"ipv4": "10.0.1.12"}}, "10.0.1.1": {"L2 Details": {}, "vendor": {}, "Routing": {}, "status": {"state": "up", "reason": "arp-response"}, "L3 Details": {}, "hostnames": [{"type": "", "name": ""}], "addresses": {"mac": "3A:1C:A1:40:61:A1", "ipv4": "10.0.1.1"}}}}
+out from add newvar
+SNMPnetstat table 10.0.1.1
+IPv4 Routing tables (inetCidrRouteTable)
+Destination                Gateway                    Flags   Interface
+10.0.1.0/24                0.0.0.0                    <U>     r0-eth1
+172.0.10.0/24              0.0.0.0                    <U>     r0-eth0
+198.0.5.0/24               0.0.0.0                    <U>     r0-eth2
+
+IPv6 Routing tables (inetCidrRouteTable)
+Destination                Gateway                    Flags   Interface
+ip6-localhost              ::                         <UH>    lo
+fe80::/64                  ::                         <U>     r0-eth2
+fe80::/64                  ::                         <U>     r0-eth0
+fe80::/64                  ::                         <U>     r0-eth1
+fe80::3020:e1ff:fe7e:2359  ::                         <UH>    r0-eth2
+fe80::381c:a1ff:fe40:61a1  ::                         <UH>    r0-eth1
+fe80::dc14:16ff:fe1e:4164  ::                         <UH>    r0-eth3
+fe80::fcce:aff:fed8:4d5d   ::                         <UH>    r0-eth0
+ff00::/8                   ::                         <U>     r0-eth3
+ff00::/8                   ::                         <U>     r0-eth2
+ff00::/8                   ::                         <U>     r0-eth0
+ff00::/8                   ::                         <U>     r0-eth1
+
+{'Destination': '10.0.1.0/24', 'Gateway': '0.0.0.0', 'Flags': '<U>', 'Interface': 'r0-eth1'}
+{'Destination': '172.0.10.0/24', 'Gateway': '0.0.0.0', 'Flags': '<U>', 'Interface': 'r0-eth0'}
+{'Destination': '198.0.5.0/24', 'Gateway': '0.0.0.0', 'Flags': '<U>', 'Interface': 'r0-eth2'}
+{'Destination': 'ip6-localhost', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'lo'}
+{'Destination': 'fe80::/64', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'r0-eth2'}
+{'Destination': 'fe80::/64', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'r0-eth0'}
+{'Destination': 'fe80::/64', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'r0-eth1'}
+{'Destination': 'fe80::3020:e1ff:fe7e:2359', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'r0-eth2'}
+{'Destination': 'fe80::381c:a1ff:fe40:61a1', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'r0-eth1'}
+{'Destination': 'fe80::dc14:16ff:fe1e:4164', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'r0-eth3'}
+{'Destination': 'fe80::fcce:aff:fed8:4d5d', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'r0-eth0'}
+{'Destination': 'ff00::/8', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'r0-eth3'}
+{'Destination': 'ff00::/8', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'r0-eth2'}
+{'Destination': 'ff00::/8', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'r0-eth0'}
+{'Destination': 'ff00::/8', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'r0-eth1'}
+SNMPnetstat table 10.0.1.12
+IPv4 Routing tables (inetCidrRouteTable)
+Destination                Gateway                    Flags   Interface
+default                    10.0.1.1                   <UG>    h1-eth0
+10.0.1.0/24                0.0.0.0                    <U>     h1-eth0
+
+IPv6 Routing tables (inetCidrRouteTable)
+Destination                Gateway                    Flags   Interface
+ip6-localhost              ::                         <UH>    lo
+fe80::/64                  ::                         <U>     h1-eth1
+fe80::1459:5dff:fea2:24c8  ::                         <UH>    h1-eth0
+fe80::3083:14ff:fe69:d376  ::                         <UH>    h1-eth1
+ff00::/8                   ::                         <U>     h1-eth0
+ff00::/8                   ::                         <U>     h1-eth1
+
+{'Destination': 'default', 'Gateway': '10.0.1.1', 'Flags': '<UG>', 'Interface': 'h1-eth0'}
+{'Destination': '10.0.1.0/24', 'Gateway': '0.0.0.0', 'Flags': '<U>', 'Interface': 'h1-eth0'}
+{'Destination': 'ip6-localhost', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'lo'}
+{'Destination': 'fe80::/64', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'h1-eth1'}
+{'Destination': 'fe80::1459:5dff:fea2:24c8', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'h1-eth0'}
+{'Destination': 'fe80::3083:14ff:fe69:d376', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'h1-eth1'}
+{'Destination': 'ff00::/8', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'h1-eth0'}
+{'Destination': 'ff00::/8', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'h1-eth1'}
+{"nmap": {"command_line": "nmap -oX - -n -sP -PE -PA21,23,80,3389 10.0.1.0/24", "scaninfo": {}, "scanstats": {"totalhosts": "256", "elapsed": "3.73", "uphosts": "2", "downhosts": "254", "timestr": "Tue Feb 18 12:37:04 2020"}}, "scan": {"10.0.1.12": {"L2 Details": {}, "vendor": {}, "Routing": {"ipv6": [{"Destination": "ip6-localhost", "Gateway": "::", "Flags": "<UH>", "Interface": "lo"}, {"Destination": "fe80::/64", "Gateway": "::", "Flags": "<U>", "Interface": "h1-eth1"}, {"Destination": "fe80::1459:5dff:fea2:24c8", "Gateway": "::", "Flags": "<UH>", "Interface": "h1-eth0"}, {"Destination": "fe80::3083:14ff:fe69:d376", "Gateway": "::", "Flags": "<UH>", "Interface": "h1-eth1"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "h1-eth0"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "h1-eth1"}], "ipv4": [{"Destination": "default", "Gateway": "10.0.1.1", "Flags": "<UG>", "Interface": "h1-eth0"}, {"Destination": "10.0.1.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "h1-eth0"}]}, "status": {"state": "up", "reason": "localhost-response"}, "L3 Details": {}, "hostnames": [{"type": "", "name": ""}], "addresses": {"ipv4": "10.0.1.12"}}, "10.0.1.1": {"L2 Details": {}, "vendor": {}, "Routing": {"ipv6": [{"Destination": "ip6-localhost", "Gateway": "::", "Flags": "<UH>", "Interface": "lo"}, {"Destination": "fe80::/64", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth2"}, {"Destination": "fe80::/64", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth0"}, {"Destination": "fe80::/64", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth1"}, {"Destination": "fe80::3020:e1ff:fe7e:2359", "Gateway": "::", "Flags": "<UH>", "Interface": "r0-eth2"}, {"Destination": "fe80::381c:a1ff:fe40:61a1", "Gateway": "::", "Flags": "<UH>", "Interface": "r0-eth1"}, {"Destination": "fe80::dc14:16ff:fe1e:4164", "Gateway": "::", "Flags": "<UH>", "Interface": "r0-eth3"}, {"Destination": "fe80::fcce:aff:fed8:4d5d", "Gateway": "::", "Flags": "<UH>", "Interface": "r0-eth0"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth3"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth2"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth0"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth1"}], "ipv4": [{"Destination": "10.0.1.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "r0-eth1"}, {"Destination": "172.0.10.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "r0-eth0"}, {"Destination": "198.0.5.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "r0-eth2"}]}, "status": {"state": "up", "reason": "arp-response"}, "L3 Details": {}, "hostnames": [{"type": "", "name": ""}], "addresses": {"mac": "3A:1C:A1:40:61:A1", "ipv4": "10.0.1.1"}}}}
+
+
+hostslist ['172.0.10.1', '172.0.10.4', '172.0.10.5']
+in add newvar convetintojson
+172.0.10.1 : up : dict_keys([]) : dict_values([])
+172.0.10.4 : up : dict_keys([]) : dict_values([])
+172.0.10.5 : up : dict_keys([]) : dict_values([])
+{"nmap": {"command_line": "nmap -oX - -n -sP -PE -PA21,23,80,3389 172.0.10.0/24", "scaninfo": {}, "scanstats": {"totalhosts": "256", "elapsed": "41.01", "uphosts": "3", "downhosts": "253", "timestr": "Tue Feb 18 12:38:30 2020"}}, "scan": {"172.0.10.5": {"L2 Details": {}, "vendor": {}, "Routing": {}, "status": {"state": "up", "reason": "echo-reply"}, "L3 Details": {}, "hostnames": [{"type": "", "name": ""}], "addresses": {"ipv4": "172.0.10.5"}}, "172.0.10.1": {"L2 Details": {}, "vendor": {}, "Routing": {}, "status": {"state": "up", "reason": "echo-reply"}, "L3 Details": {}, "hostnames": [{"type": "", "name": ""}], "addresses": {"ipv4": "172.0.10.1"}}, "172.0.10.4": {"L2 Details": {}, "vendor": {}, "Routing": {}, "status": {"state": "up", "reason": "echo-reply"}, "L3 Details": {}, "hostnames": [{"type": "", "name": ""}], "addresses": {"ipv4": "172.0.10.4"}}}}
+out from add newvar
+SNMPnetstat table 172.0.10.1
+IPv4 Routing tables (inetCidrRouteTable)
+Destination                Gateway                    Flags   Interface
+10.0.1.0/24                0.0.0.0                    <U>     r0-eth1
+172.0.10.0/24              0.0.0.0                    <U>     r0-eth0
+198.0.5.0/24               0.0.0.0                    <U>     r0-eth2
+
+IPv6 Routing tables (inetCidrRouteTable)
+Destination                Gateway                    Flags   Interface
+ip6-localhost              ::                         <UH>    lo
+fe80::/64                  ::                         <U>     r0-eth2
+fe80::/64                  ::                         <U>     r0-eth0
+fe80::/64                  ::                         <U>     r0-eth1
+fe80::3020:e1ff:fe7e:2359  ::                         <UH>    r0-eth2
+fe80::381c:a1ff:fe40:61a1  ::                         <UH>    r0-eth1
+fe80::dc14:16ff:fe1e:4164  ::                         <UH>    r0-eth3
+fe80::fcce:aff:fed8:4d5d   ::                         <UH>    r0-eth0
+ff00::/8                   ::                         <U>     r0-eth3
+ff00::/8                   ::                         <U>     r0-eth2
+ff00::/8                   ::                         <U>     r0-eth0
+ff00::/8                   ::                         <U>     r0-eth1
+
+{'Destination': '10.0.1.0/24', 'Gateway': '0.0.0.0', 'Flags': '<U>', 'Interface': 'r0-eth1'}
+{'Destination': '172.0.10.0/24', 'Gateway': '0.0.0.0', 'Flags': '<U>', 'Interface': 'r0-eth0'}
+{'Destination': '198.0.5.0/24', 'Gateway': '0.0.0.0', 'Flags': '<U>', 'Interface': 'r0-eth2'}
+{'Destination': 'ip6-localhost', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'lo'}
+{'Destination': 'fe80::/64', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'r0-eth2'}
+{'Destination': 'fe80::/64', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'r0-eth0'}
+{'Destination': 'fe80::/64', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'r0-eth1'}
+{'Destination': 'fe80::3020:e1ff:fe7e:2359', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'r0-eth2'}
+{'Destination': 'fe80::381c:a1ff:fe40:61a1', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'r0-eth1'}
+{'Destination': 'fe80::dc14:16ff:fe1e:4164', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'r0-eth3'}
+{'Destination': 'fe80::fcce:aff:fed8:4d5d', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'r0-eth0'}
+{'Destination': 'ff00::/8', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'r0-eth3'}
+{'Destination': 'ff00::/8', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'r0-eth2'}
+{'Destination': 'ff00::/8', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'r0-eth0'}
+{'Destination': 'ff00::/8', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'r0-eth1'}
+SNMPnetstat table 172.0.10.4
+IPv4 Routing tables (inetCidrRouteTable)
+Destination                Gateway                    Flags   Interface
+default                    172.0.10.1                 <UG>    h4-eth0
+172.0.10.0/24              0.0.0.0                    <U>     h4-eth0
+
+IPv6 Routing tables (inetCidrRouteTable)
+Destination                Gateway                    Flags   Interface
+ip6-localhost              ::                         <UH>    lo
+fe80::6c39:23ff:fe42:3701  ::                         <UH>    h4-eth0
+ff00::/8                   ::                         <U>     h4-eth0
+
+{'Destination': 'default', 'Gateway': '172.0.10.1', 'Flags': '<UG>', 'Interface': 'h4-eth0'}
+{'Destination': '172.0.10.0/24', 'Gateway': '0.0.0.0', 'Flags': '<U>', 'Interface': 'h4-eth0'}
+{'Destination': 'ip6-localhost', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'lo'}
+{'Destination': 'fe80::6c39:23ff:fe42:3701', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'h4-eth0'}
+{'Destination': 'ff00::/8', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'h4-eth0'}
+SNMPnetstat table 172.0.10.5
+IPv4 Routing tables (inetCidrRouteTable)
+Destination                Gateway                    Flags   Interface
+default                    172.0.10.1                 <UG>    h5-eth0
+172.0.10.0/24              0.0.0.0                    <U>     h5-eth0
+
+IPv6 Routing tables (inetCidrRouteTable)
+Destination                Gateway                    Flags   Interface
+ip6-localhost              ::                         <UH>    lo
+fe80::54eb:25ff:fe2d:3ed7  ::                         <UH>    h5-eth0
+ff00::/8                   ::                         <U>     h5-eth0
+
+{'Destination': 'default', 'Gateway': '172.0.10.1', 'Flags': '<UG>', 'Interface': 'h5-eth0'}
+{'Destination': '172.0.10.0/24', 'Gateway': '0.0.0.0', 'Flags': '<U>', 'Interface': 'h5-eth0'}
+{'Destination': 'ip6-localhost', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'lo'}
+{'Destination': 'fe80::54eb:25ff:fe2d:3ed7', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'h5-eth0'}
+{'Destination': 'ff00::/8', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'h5-eth0'}
+{"nmap": {"command_line": "nmap -oX - -n -sP -PE -PA21,23,80,3389 172.0.10.0/24", "scaninfo": {}, "scanstats": {"totalhosts": "256", "elapsed": "41.01", "uphosts": "3", "downhosts": "253", "timestr": "Tue Feb 18 12:38:30 2020"}}, "scan": {"172.0.10.5": {"L2 Details": {}, "vendor": {}, "Routing": {"ipv6": [{"Destination": "ip6-localhost", "Gateway": "::", "Flags": "<UH>", "Interface": "lo"}, {"Destination": "fe80::54eb:25ff:fe2d:3ed7", "Gateway": "::", "Flags": "<UH>", "Interface": "h5-eth0"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "h5-eth0"}], "ipv4": [{"Destination": "default", "Gateway": "172.0.10.1", "Flags": "<UG>", "Interface": "h5-eth0"}, {"Destination": "172.0.10.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "h5-eth0"}]}, "status": {"state": "up", "reason": "echo-reply"}, "L3 Details": {}, "hostnames": [{"type": "", "name": ""}], "addresses": {"ipv4": "172.0.10.5"}}, "172.0.10.1": {"L2 Details": {}, "vendor": {}, "Routing": {"ipv6": [{"Destination": "ip6-localhost", "Gateway": "::", "Flags": "<UH>", "Interface": "lo"}, {"Destination": "fe80::/64", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth2"}, {"Destination": "fe80::/64", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth0"}, {"Destination": "fe80::/64", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth1"}, {"Destination": "fe80::3020:e1ff:fe7e:2359", "Gateway": "::", "Flags": "<UH>", "Interface": "r0-eth2"}, {"Destination": "fe80::381c:a1ff:fe40:61a1", "Gateway": "::", "Flags": "<UH>", "Interface": "r0-eth1"}, {"Destination": "fe80::dc14:16ff:fe1e:4164", "Gateway": "::", "Flags": "<UH>", "Interface": "r0-eth3"}, {"Destination": "fe80::fcce:aff:fed8:4d5d", "Gateway": "::", "Flags": "<UH>", "Interface": "r0-eth0"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth3"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth2"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth0"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth1"}], "ipv4": [{"Destination": "10.0.1.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "r0-eth1"}, {"Destination": "172.0.10.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "r0-eth0"}, {"Destination": "198.0.5.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "r0-eth2"}]}, "status": {"state": "up", "reason": "echo-reply"}, "L3 Details": {}, "hostnames": [{"type": "", "name": ""}], "addresses": {"ipv4": "172.0.10.1"}}, "172.0.10.4": {"L2 Details": {}, "vendor": {}, "Routing": {"ipv6": [{"Destination": "ip6-localhost", "Gateway": "::", "Flags": "<UH>", "Interface": "lo"}, {"Destination": "fe80::6c39:23ff:fe42:3701", "Gateway": "::", "Flags": "<UH>", "Interface": "h4-eth0"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "h4-eth0"}], "ipv4": [{"Destination": "default", "Gateway": "172.0.10.1", "Flags": "<UG>", "Interface": "h4-eth0"}, {"Destination": "172.0.10.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "h4-eth0"}]}, "status": {"state": "up", "reason": "echo-reply"}, "L3 Details": {}, "hostnames": [{"type": "", "name": ""}], "addresses": {"ipv4": "172.0.10.4"}}}}
+
+
+hostslist ['198.0.5.1', '198.0.5.2', '198.0.5.3']
+in add newvar convetintojson
+198.0.5.1 : up : dict_keys([]) : dict_values([])
+198.0.5.2 : up : dict_keys([]) : dict_values([])
+198.0.5.3 : up : dict_keys([]) : dict_values([])
+{"nmap": {"command_line": "nmap -oX - -n -sP -PE -PA21,23,80,3389 198.0.5.0/24", "scaninfo": {}, "scanstats": {"totalhosts": "256", "elapsed": "15.97", "uphosts": "3", "downhosts": "253", "timestr": "Tue Feb 18 12:38:55 2020"}}, "scan": {"198.0.5.2": {"L2 Details": {}, "vendor": {}, "Routing": {}, "status": {"state": "up", "reason": "echo-reply"}, "L3 Details": {}, "hostnames": [{"type": "", "name": ""}], "addresses": {"ipv4": "198.0.5.2"}}, "198.0.5.1": {"L2 Details": {}, "vendor": {}, "Routing": {}, "status": {"state": "up", "reason": "echo-reply"}, "L3 Details": {}, "hostnames": [{"type": "", "name": ""}], "addresses": {"ipv4": "198.0.5.1"}}, "198.0.5.3": {"L2 Details": {}, "vendor": {}, "Routing": {}, "status": {"state": "up", "reason": "echo-reply"}, "L3 Details": {}, "hostnames": [{"type": "", "name": ""}], "addresses": {"ipv4": "198.0.5.3"}}}}
+out from add newvar
+SNMPnetstat table 198.0.5.1
+IPv4 Routing tables (inetCidrRouteTable)
+Destination                Gateway                    Flags   Interface
+10.0.1.0/24                0.0.0.0                    <U>     r0-eth1
+172.0.10.0/24              0.0.0.0                    <U>     r0-eth0
+198.0.5.0/24               0.0.0.0                    <U>     r0-eth2
+
+IPv6 Routing tables (inetCidrRouteTable)
+Destination                Gateway                    Flags   Interface
+ip6-localhost              ::                         <UH>    lo
+fe80::/64                  ::                         <U>     r0-eth2
+fe80::/64                  ::                         <U>     r0-eth0
+fe80::/64                  ::                         <U>     r0-eth1
+fe80::3020:e1ff:fe7e:2359  ::                         <UH>    r0-eth2
+fe80::381c:a1ff:fe40:61a1  ::                         <UH>    r0-eth1
+fe80::dc14:16ff:fe1e:4164  ::                         <UH>    r0-eth3
+fe80::fcce:aff:fed8:4d5d   ::                         <UH>    r0-eth0
+ff00::/8                   ::                         <U>     r0-eth3
+ff00::/8                   ::                         <U>     r0-eth2
+ff00::/8                   ::                         <U>     r0-eth0
+ff00::/8                   ::                         <U>     r0-eth1
+
+{'Destination': '10.0.1.0/24', 'Gateway': '0.0.0.0', 'Flags': '<U>', 'Interface': 'r0-eth1'}
+{'Destination': '172.0.10.0/24', 'Gateway': '0.0.0.0', 'Flags': '<U>', 'Interface': 'r0-eth0'}
+{'Destination': '198.0.5.0/24', 'Gateway': '0.0.0.0', 'Flags': '<U>', 'Interface': 'r0-eth2'}
+{'Destination': 'ip6-localhost', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'lo'}
+{'Destination': 'fe80::/64', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'r0-eth2'}
+{'Destination': 'fe80::/64', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'r0-eth0'}
+{'Destination': 'fe80::/64', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'r0-eth1'}
+{'Destination': 'fe80::3020:e1ff:fe7e:2359', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'r0-eth2'}
+{'Destination': 'fe80::381c:a1ff:fe40:61a1', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'r0-eth1'}
+{'Destination': 'fe80::dc14:16ff:fe1e:4164', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'r0-eth3'}
+{'Destination': 'fe80::fcce:aff:fed8:4d5d', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'r0-eth0'}
+{'Destination': 'ff00::/8', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'r0-eth3'}
+{'Destination': 'ff00::/8', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'r0-eth2'}
+{'Destination': 'ff00::/8', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'r0-eth0'}
+{'Destination': 'ff00::/8', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'r0-eth1'}
+SNMPnetstat table 198.0.5.2
+IPv4 Routing tables (inetCidrRouteTable)
+Destination                Gateway                    Flags   Interface
+default                    198.0.5.1                  <UG>    h2-eth0
+198.0.5.0/24               0.0.0.0                    <U>     h2-eth0
+
+IPv6 Routing tables (inetCidrRouteTable)
+Destination                Gateway                    Flags   Interface
+ip6-localhost              ::                         <UH>    lo
+fe80::9485:4ff:fe55:2cba   ::                         <UH>    h2-eth0
+ff00::/8                   ::                         <U>     h2-eth0
+
+{'Destination': 'default', 'Gateway': '198.0.5.1', 'Flags': '<UG>', 'Interface': 'h2-eth0'}
+{'Destination': '198.0.5.0/24', 'Gateway': '0.0.0.0', 'Flags': '<U>', 'Interface': 'h2-eth0'}
+{'Destination': 'ip6-localhost', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'lo'}
+{'Destination': 'fe80::9485:4ff:fe55:2cba', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'h2-eth0'}
+{'Destination': 'ff00::/8', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'h2-eth0'}
+SNMPnetstat table 198.0.5.3
+IPv4 Routing tables (inetCidrRouteTable)
+Destination                Gateway                    Flags   Interface
+default                    198.0.5.1                  <UG>    h3-eth0
+198.0.5.0/24               0.0.0.0                    <U>     h3-eth0
+
+IPv6 Routing tables (inetCidrRouteTable)
+Destination                Gateway                    Flags   Interface
+ip6-localhost              ::                         <UH>    lo
+fe80::2428:dcff:feec:8afe  ::                         <UH>    h3-eth0
+ff00::/8                   ::                         <U>     h3-eth0
+
+{'Destination': 'default', 'Gateway': '198.0.5.1', 'Flags': '<UG>', 'Interface': 'h3-eth0'}
+{'Destination': '198.0.5.0/24', 'Gateway': '0.0.0.0', 'Flags': '<U>', 'Interface': 'h3-eth0'}
+{'Destination': 'ip6-localhost', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'lo'}
+{'Destination': 'fe80::2428:dcff:feec:8afe', 'Gateway': '::', 'Flags': '<UH>', 'Interface': 'h3-eth0'}
+{'Destination': 'ff00::/8', 'Gateway': '::', 'Flags': '<U>', 'Interface': 'h3-eth0'}
+{"nmap": {"command_line": "nmap -oX - -n -sP -PE -PA21,23,80,3389 198.0.5.0/24", "scaninfo": {}, "scanstats": {"totalhosts": "256", "elapsed": "15.97", "uphosts": "3", "downhosts": "253", "timestr": "Tue Feb 18 12:38:55 2020"}}, "scan": {"198.0.5.1": {"L2 Details": {}, "vendor": {}, "Routing": {"ipv6": [{"Destination": "ip6-localhost", "Gateway": "::", "Flags": "<UH>", "Interface": "lo"}, {"Destination": "fe80::/64", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth2"}, {"Destination": "fe80::/64", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth0"}, {"Destination": "fe80::/64", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth1"}, {"Destination": "fe80::3020:e1ff:fe7e:2359", "Gateway": "::", "Flags": "<UH>", "Interface": "r0-eth2"}, {"Destination": "fe80::381c:a1ff:fe40:61a1", "Gateway": "::", "Flags": "<UH>", "Interface": "r0-eth1"}, {"Destination": "fe80::dc14:16ff:fe1e:4164", "Gateway": "::", "Flags": "<UH>", "Interface": "r0-eth3"}, {"Destination": "fe80::fcce:aff:fed8:4d5d", "Gateway": "::", "Flags": "<UH>", "Interface": "r0-eth0"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth3"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth2"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth0"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth1"}], "ipv4": [{"Destination": "10.0.1.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "r0-eth1"}, {"Destination": "172.0.10.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "r0-eth0"}, {"Destination": "198.0.5.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "r0-eth2"}]}, "status": {"state": "up", "reason": "echo-reply"}, "L3 Details": {}, "hostnames": [{"type": "", "name": ""}], "addresses": {"ipv4": "198.0.5.1"}}, "198.0.5.2": {"L2 Details": {}, "vendor": {}, "Routing": {"ipv6": [{"Destination": "ip6-localhost", "Gateway": "::", "Flags": "<UH>", "Interface": "lo"}, {"Destination": "fe80::9485:4ff:fe55:2cba", "Gateway": "::", "Flags": "<UH>", "Interface": "h2-eth0"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "h2-eth0"}], "ipv4": [{"Destination": "default", "Gateway": "198.0.5.1", "Flags": "<UG>", "Interface": "h2-eth0"}, {"Destination": "198.0.5.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "h2-eth0"}]}, "status": {"state": "up", "reason": "echo-reply"}, "L3 Details": {}, "hostnames": [{"type": "", "name": ""}], "addresses": {"ipv4": "198.0.5.2"}}, "198.0.5.3": {"L2 Details": {}, "vendor": {}, "Routing": {"ipv6": [{"Destination": "ip6-localhost", "Gateway": "::", "Flags": "<UH>", "Interface": "lo"}, {"Destination": "fe80::2428:dcff:feec:8afe", "Gateway": "::", "Flags": "<UH>", "Interface": "h3-eth0"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "h3-eth0"}], "ipv4": [{"Destination": "default", "Gateway": "198.0.5.1", "Flags": "<UG>", "Interface": "h3-eth0"}, {"Destination": "198.0.5.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "h3-eth0"}]}, "status": {"state": "up", "reason": "echo-reply"}, "L3 Details": {}, "hostnames": [{"type": "", "name": ""}], "addresses": {"ipv4": "198.0.5.3"}}}}
+
+
+
+final json file
+ ['{"nmap": {"command_line": "nmap -oX - -n -sP -PE -PA21,23,80,3389 10.0.1.0/24", "scaninfo": {}, "scanstats": {"totalhosts": "256", "elapsed": "3.73", "uphosts": "2", "downhosts": "254", "timestr": "Tue Feb 18 12:37:04 2020"}}, "scan": {"10.0.1.12": {"L2 Details": {}, "vendor": {}, "Routing": {"ipv6": [{"Destination": "ip6-localhost", "Gateway": "::", "Flags": "<UH>", "Interface": "lo"}, {"Destination": "fe80::/64", "Gateway": "::", "Flags": "<U>", "Interface": "h1-eth1"}, {"Destination": "fe80::1459:5dff:fea2:24c8", "Gateway": "::", "Flags": "<UH>", "Interface": "h1-eth0"}, {"Destination": "fe80::3083:14ff:fe69:d376", "Gateway": "::", "Flags": "<UH>", "Interface": "h1-eth1"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "h1-eth0"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "h1-eth1"}], "ipv4": [{"Destination": "default", "Gateway": "10.0.1.1", "Flags": "<UG>", "Interface": "h1-eth0"}, {"Destination": "10.0.1.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "h1-eth0"}]}, "status": {"state": "up", "reason": "localhost-response"}, "L3 Details": {}, "hostnames": [{"type": "", "name": ""}], "addresses": {"ipv4": "10.0.1.12"}}, "10.0.1.1": {"L2 Details": {}, "vendor": {}, "Routing": {"ipv6": [{"Destination": "ip6-localhost", "Gateway": "::", "Flags": "<UH>", "Interface": "lo"}, {"Destination": "fe80::/64", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth2"}, {"Destination": "fe80::/64", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth0"}, {"Destination": "fe80::/64", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth1"}, {"Destination": "fe80::3020:e1ff:fe7e:2359", "Gateway": "::", "Flags": "<UH>", "Interface": "r0-eth2"}, {"Destination": "fe80::381c:a1ff:fe40:61a1", "Gateway": "::", "Flags": "<UH>", "Interface": "r0-eth1"}, {"Destination": "fe80::dc14:16ff:fe1e:4164", "Gateway": "::", "Flags": "<UH>", "Interface": "r0-eth3"}, {"Destination": "fe80::fcce:aff:fed8:4d5d", "Gateway": "::", "Flags": "<UH>", "Interface": "r0-eth0"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth3"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth2"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth0"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth1"}], "ipv4": [{"Destination": "10.0.1.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "r0-eth1"}, {"Destination": "172.0.10.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "r0-eth0"}, {"Destination": "198.0.5.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "r0-eth2"}]}, "status": {"state": "up", "reason": "arp-response"}, "L3 Details": {}, "hostnames": [{"type": "", "name": ""}], "addresses": {"mac": "3A:1C:A1:40:61:A1", "ipv4": "10.0.1.1"}}}}', '{"nmap": {"command_line": "nmap -oX - -n -sP -PE -PA21,23,80,3389 172.0.10.0/24", "scaninfo": {}, "scanstats": {"totalhosts": "256", "elapsed": "41.01", "uphosts": "3", "downhosts": "253", "timestr": "Tue Feb 18 12:38:30 2020"}}, "scan": {"172.0.10.5": {"L2 Details": {}, "vendor": {}, "Routing": {"ipv6": [{"Destination": "ip6-localhost", "Gateway": "::", "Flags": "<UH>", "Interface": "lo"}, {"Destination": "fe80::54eb:25ff:fe2d:3ed7", "Gateway": "::", "Flags": "<UH>", "Interface": "h5-eth0"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "h5-eth0"}], "ipv4": [{"Destination": "default", "Gateway": "172.0.10.1", "Flags": "<UG>", "Interface": "h5-eth0"}, {"Destination": "172.0.10.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "h5-eth0"}]}, "status": {"state": "up", "reason": "echo-reply"}, "L3 Details": {}, "hostnames": [{"type": "", "name": ""}], "addresses": {"ipv4": "172.0.10.5"}}, "172.0.10.1": {"L2 Details": {}, "vendor": {}, "Routing": {"ipv6": [{"Destination": "ip6-localhost", "Gateway": "::", "Flags": "<UH>", "Interface": "lo"}, {"Destination": "fe80::/64", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth2"}, {"Destination": "fe80::/64", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth0"}, {"Destination": "fe80::/64", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth1"}, {"Destination": "fe80::3020:e1ff:fe7e:2359", "Gateway": "::", "Flags": "<UH>", "Interface": "r0-eth2"}, {"Destination": "fe80::381c:a1ff:fe40:61a1", "Gateway": "::", "Flags": "<UH>", "Interface": "r0-eth1"}, {"Destination": "fe80::dc14:16ff:fe1e:4164", "Gateway": "::", "Flags": "<UH>", "Interface": "r0-eth3"}, {"Destination": "fe80::fcce:aff:fed8:4d5d", "Gateway": "::", "Flags": "<UH>", "Interface": "r0-eth0"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth3"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth2"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth0"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth1"}], "ipv4": [{"Destination": "10.0.1.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "r0-eth1"}, {"Destination": "172.0.10.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "r0-eth0"}, {"Destination": "198.0.5.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "r0-eth2"}]}, "status": {"state": "up", "reason": "echo-reply"}, "L3 Details": {}, "hostnames": [{"type": "", "name": ""}], "addresses": {"ipv4": "172.0.10.1"}}, "172.0.10.4": {"L2 Details": {}, "vendor": {}, "Routing": {"ipv6": [{"Destination": "ip6-localhost", "Gateway": "::", "Flags": "<UH>", "Interface": "lo"}, {"Destination": "fe80::6c39:23ff:fe42:3701", "Gateway": "::", "Flags": "<UH>", "Interface": "h4-eth0"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "h4-eth0"}], "ipv4": [{"Destination": "default", "Gateway": "172.0.10.1", "Flags": "<UG>", "Interface": "h4-eth0"}, {"Destination": "172.0.10.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "h4-eth0"}]}, "status": {"state": "up", "reason": "echo-reply"}, "L3 Details": {}, "hostnames": [{"type": "", "name": ""}], "addresses": {"ipv4": "172.0.10.4"}}}}', '{"nmap": {"command_line": "nmap -oX - -n -sP -PE -PA21,23,80,3389 198.0.5.0/24", "scaninfo": {}, "scanstats": {"totalhosts": "256", "elapsed": "15.97", "uphosts": "3", "downhosts": "253", "timestr": "Tue Feb 18 12:38:55 2020"}}, "scan": {"198.0.5.1": {"L2 Details": {}, "vendor": {}, "Routing": {"ipv6": [{"Destination": "ip6-localhost", "Gateway": "::", "Flags": "<UH>", "Interface": "lo"}, {"Destination": "fe80::/64", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth2"}, {"Destination": "fe80::/64", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth0"}, {"Destination": "fe80::/64", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth1"}, {"Destination": "fe80::3020:e1ff:fe7e:2359", "Gateway": "::", "Flags": "<UH>", "Interface": "r0-eth2"}, {"Destination": "fe80::381c:a1ff:fe40:61a1", "Gateway": "::", "Flags": "<UH>", "Interface": "r0-eth1"}, {"Destination": "fe80::dc14:16ff:fe1e:4164", "Gateway": "::", "Flags": "<UH>", "Interface": "r0-eth3"}, {"Destination": "fe80::fcce:aff:fed8:4d5d", "Gateway": "::", "Flags": "<UH>", "Interface": "r0-eth0"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth3"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth2"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth0"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "r0-eth1"}], "ipv4": [{"Destination": "10.0.1.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "r0-eth1"}, {"Destination": "172.0.10.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "r0-eth0"}, {"Destination": "198.0.5.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "r0-eth2"}]}, "status": {"state": "up", "reason": "echo-reply"}, "L3 Details": {}, "hostnames": [{"type": "", "name": ""}], "addresses": {"ipv4": "198.0.5.1"}}, "198.0.5.2": {"L2 Details": {}, "vendor": {}, "Routing": {"ipv6": [{"Destination": "ip6-localhost", "Gateway": "::", "Flags": "<UH>", "Interface": "lo"}, {"Destination": "fe80::9485:4ff:fe55:2cba", "Gateway": "::", "Flags": "<UH>", "Interface": "h2-eth0"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "h2-eth0"}], "ipv4": [{"Destination": "default", "Gateway": "198.0.5.1", "Flags": "<UG>", "Interface": "h2-eth0"}, {"Destination": "198.0.5.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "h2-eth0"}]}, "status": {"state": "up", "reason": "echo-reply"}, "L3 Details": {}, "hostnames": [{"type": "", "name": ""}], "addresses": {"ipv4": "198.0.5.2"}}, "198.0.5.3": {"L2 Details": {}, "vendor": {}, "Routing": {"ipv6": [{"Destination": "ip6-localhost", "Gateway": "::", "Flags": "<UH>", "Interface": "lo"}, {"Destination": "fe80::2428:dcff:feec:8afe", "Gateway": "::", "Flags": "<UH>", "Interface": "h3-eth0"}, {"Destination": "ff00::/8", "Gateway": "::", "Flags": "<U>", "Interface": "h3-eth0"}], "ipv4": [{"Destination": "default", "Gateway": "198.0.5.1", "Flags": "<UG>", "Interface": "h3-eth0"}, {"Destination": "198.0.5.0/24", "Gateway": "0.0.0.0", "Flags": "<U>", "Interface": "h3-eth0"}]}, "status": {"state": "up", "reason": "echo-reply"}, "L3 Details": {}, "hostnames": [{"type": "", "name": ""}], "addresses": {"ipv4": "198.0.5.3"}}}}']
+

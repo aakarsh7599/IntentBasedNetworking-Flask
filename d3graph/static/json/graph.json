@@ -1,0 +1,168 @@
+{
+    "nodes": [
+        {
+            "parity": 0, 
+            "katz": 0.3157965089201149, 
+            "id": 0, 
+            "degree": 5
+        }, 
+        {
+            "parity": 1, 
+            "katz": 0.2974207811641662, 
+            "id": 1, 
+            "degree": 4
+        }, 
+        {
+            "parity": 0, 
+            "katz": 0.32013678838672055, 
+            "id": 2, 
+            "degree": 5
+        }, 
+        {
+            "parity": 1, 
+            "katz": 0.25410597799496926, 
+            "id": 3, 
+            "degree": 2
+        }, 
+        {
+            "parity": 0, 
+            "katz": 0.21637086637826117, 
+            "id": 4, 
+            "degree": 1
+        }, 
+        {
+            "parity": 1, 
+            "katz": 0.2472514804489013, 
+            "id": 5, 
+            "degree": 2
+        }, 
+        {
+            "parity": 0, 
+            "katz": 0.2202547429216609, 
+            "id": 6, 
+            "degree": 1
+        }, 
+        {
+            "parity": 1, 
+            "katz": 0.2472514804489013, 
+            "id": 7, 
+            "degree": 2
+        }, 
+        {
+            "parity": 0, 
+            "katz": 0.2585818953377772, 
+            "id": 8, 
+            "degree": 3
+        }, 
+        {
+            "parity": 1, 
+            "katz": 0.25021188355798263, 
+            "id": 9, 
+            "degree": 2
+        }, 
+        {
+            "parity": 0, 
+            "katz": 0.22209231628167245, 
+            "id": 10, 
+            "degree": 1
+        }, 
+        {
+            "parity": 0, 
+            "katz": 0.2768555588624924, 
+            "id": 11, 
+            "degree": 3
+        }, 
+        {
+            "parity": 1, 
+            "katz": 0.25183438016300075, 
+            "id": 12, 
+            "degree": 2
+        }, 
+        {
+            "parity": 0, 
+            "katz": 0.21637086637826117, 
+            "id": 13, 
+            "degree": 1
+        }, 
+        {
+            "parity": 1, 
+            "katz": 0.24795050361960103, 
+            "id": 14, 
+            "degree": 2
+        }
+    ], 
+    "links": [
+        {
+            "source": 0, 
+            "target": 11
+        }, 
+        {
+            "source": 0, 
+            "target": 10
+        }, 
+        {
+            "source": 0, 
+            "target": 3
+        }, 
+        {
+            "source": 0, 
+            "target": 12
+        }, 
+        {
+            "source": 0, 
+            "target": 14
+        }, 
+        {
+            "source": 1, 
+            "target": 2
+        }, 
+        {
+            "source": 1, 
+            "target": 11
+        }, 
+        {
+            "source": 1, 
+            "target": 12
+        }, 
+        {
+            "source": 1, 
+            "target": 6
+        }, 
+        {
+            "source": 2, 
+            "target": 3
+        }, 
+        {
+            "source": 2, 
+            "target": 9
+        }, 
+        {
+            "source": 2, 
+            "target": 5
+        }, 
+        {
+            "source": 2, 
+            "target": 7
+        }, 
+        {
+            "source": 4, 
+            "target": 8
+        }, 
+        {
+            "source": 5, 
+            "target": 7
+        }, 
+        {
+            "source": 8, 
+            "target": 13
+        }, 
+        {
+            "source": 8, 
+            "target": 14
+        }, 
+        {
+            "source": 9, 
+            "target": 11
+        }
+    ]
+}
